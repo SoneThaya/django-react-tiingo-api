@@ -9,12 +9,12 @@ def getRoutes(request):
 
 
 @api_view(['GET'])
-def ticker(request, tid):
+def ticker(request, tid, sDate, eDate):
     context = {}
     context['ticker'] = tid
     context['meta'] = get_meta_data(tid)
     context['price'] = get_price_data(tid)
-    context['history'] = get_historical_price_data(tid)
+    context['history'] = get_historical_price_data(tid, sDate, eDate)
     return Response(context)
 
 

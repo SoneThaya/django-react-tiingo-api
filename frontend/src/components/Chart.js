@@ -12,7 +12,7 @@ const Chart = ({ data }) => {
             <Tooltip />
             <Legend />
             <Line type="monotone" dataKey="high" stroke="#8884d8" />
-            {/* <Line type="monotone" dataKey="adjsHigh" stroke="#82ca9d" /> */}
+            <Line type="monotone" dataKey="low" stroke="#82ca9d" />
         </LineChart>
     )
 }
